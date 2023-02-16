@@ -1,0 +1,140 @@
+
+.storybook-button {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 3em;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+}
+.storybook-button--primary {
+  color: white;
+  background-color: #1ea7fd;
+}
+.storybook-button--secondary {
+  color: #333;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+}
+.storybook-button--small {
+  font-size: 12px;
+  padding: 10px 16px;
+}
+.storybook-button--medium {
+  font-size: 14px;
+  padding: 11px 20px;
+}
+.storybook-button--large {
+  font-size: 16px;
+  padding: 12px 24px;
+}
+
+.wrapper {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+svg {
+  display: inline-block;
+  vertical-align: top;
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 20px;
+  line-height: 1;
+  margin: 6px 0 6px 10px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+button + button {
+  margin-left: 10px;
+}
+
+.welcome {
+  color: #333;
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+section {
+  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 48px 20px;
+  margin: 0 auto;
+  max-width: 600px;
+  color: #333;
+}
+
+section h2 {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 1;
+  margin: 0 0 4px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+section p {
+  margin: 1em 0;
+}
+
+section a {
+  text-decoration: none;
+  color: #1ea7fd;
+}
+
+section ul {
+  padding-left: 30px;
+  margin: 1em 0;
+}
+
+section li {
+  margin-bottom: 8px;
+}
+
+section .tip {
+  display: inline-block;
+  border-radius: 1em;
+  font-size: 11px;
+  line-height: 12px;
+  font-weight: 700;
+  background: #e7fdd8;
+  color: #66bf3c;
+  padding: 4px 12px;
+  margin-right: 10px;
+  vertical-align: top;
+}
+
+section .tip-wrapper {
+  font-size: 13px;
+  line-height: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+section .tip-wrapper svg {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  margin-right: 4px;
+  vertical-align: top;
+  margin-top: 3px;
+}
+
+section .tip-wrapper svg path {
+  fill: #1ea7fd;
+}
+
+.progress{display:flex;position:relative;margin:15px 0;height:20px;width:300px;background-color:#d8d8d8;border-radius:20px}.progress .progressdone{display:flex;height:100%;width:0;opacity:0;background:linear-gradient(to right, #38ef7d, #11998e);box-shadow:0 3px 3px -5px #38ef7d,0 2px 5px #11998e;border-radius:20px;align-items:center;justify-content:center;color:#53595c;transition:1s ease .3s}
+.postSk{width:274px;margin-right:12px;margin-bottom:30px;-webkit-animation:skeleton 1s ease infinite alternate;animation:skeleton 1s ease infinite alternate}@-webkit-keyframes skeleton{to{opacity:.5}}@keyframes skeleton{to{opacity:.5}}.postSkImg{background-color:#313131;width:274px;height:153px}.postSkInfo{display:flex;margin-top:15px}.postSkAvatar{background-color:#313131;width:32px;height:32px;border-radius:50%;margin-right:10px}.postSkDetail{display:flex;flex-direction:column;width:100%}.postSkText{background-color:#313131;width:90%;height:20px;margin-bottom:5px}.postSkText.sm{width:50%}.topSk{flex:3 1;display:flex;align-items:center;justify-content:center;-webkit-animation:skeleton 1s ease infinite alternate;animation:skeleton 1s ease infinite alternate}.topSkIcon{margin-right:20px;width:25px;height:25px;border-radius:50%;background-color:#313131}.topSkImg{width:30px;height:30px;border-radius:50%;margin-right:40px;background-color:#313131}.menuSk{-webkit-animation:skeleton 1s ease infinite alternate;animation:skeleton 1s ease infinite alternate}.menuSkItem{width:40px;height:40px;border-radius:50%;background-color:#313131;margin-top:40px}.circle,.custom{display:flex;width:100%;align-items:center;justify-content:center;margin-top:20px}.custom{flex-direction:column}.balls{display:flex}.ball{width:10px;height:10px;border-radius:50%;background-color:#313131;margin-right:10px;-webkit-animation:ball .5s ease infinite alternate;animation:ball .5s ease infinite alternate}.ball2{-webkit-animation-delay:.1s;animation-delay:.1s}.ball3{-webkit-animation-delay:.2s;animation-delay:.2s}@-webkit-keyframes ball{to{-webkit-transform:translateY(-10px);transform:translateY(-10px)}}@keyframes ball{to{-webkit-transform:translateY(-10px);transform:translateY(-10px)}}.customTet{font-weight:100}
+
+
+/*# sourceMappingURL=main.7ec241c0.css.map*/
