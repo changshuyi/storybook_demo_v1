@@ -82,7 +82,7 @@ const StyledButton = styled.button`
 `;
 
 /**
- * `Button` 元件代表一個可點擊的按鈕，在使用者點擊之後會觸發相對應的業務邏輯。
+ * `Button` 可點擊的按鈕，在使用者點擊之後會觸發相對應的操作。
  */
 const Button = ({
   className,
