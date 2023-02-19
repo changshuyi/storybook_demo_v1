@@ -1,7 +1,7 @@
 const defaultTheme = {
   color: {
-    primary: '#1976d2',
-    secondary: '#dc004e',
+    primary: '#002884',
+    secondary: '#f44336',
     disable: '#dadada',
     error: '#d0021b',
   },
