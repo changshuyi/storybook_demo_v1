@@ -2,6 +2,7 @@ import { ThemeProvider } from 'styled-components';
 import './App.css';
 import Button from './components/button/Button';
 import theme from './theme/index';
+import TagsInput from './components/tagsInput/TagsInput';
 
 function App() {
   return (

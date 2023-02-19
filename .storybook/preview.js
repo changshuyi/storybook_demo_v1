@@ -1,6 +1,7 @@
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../src/theme/index';
 import Center from '../src/stories/Center';
+import { library } from '@fortawesome/fontawesome-svg-core';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },

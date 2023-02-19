@@ -3,7 +3,29 @@ import './tagsInput.scss';
 import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import useColor from '../../hooks/useColor';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+const containedStyle = css`
+  background: ${(props) => props.$tagColor};
+  color: #fff;
+`;
+
+const outlinedStyle = css`
+  background: #fff;
+  color: ${(props) => props.$tagColor};
+  border: 1px solid ${(props) => props.$tagColor};
+  &:hover {
+    background: ${(props) => `${props.$tagColor}10`};
+  }
+`;
+
+const textStyle = css`
+  background: #fff;
+  color: ${(props) => props.$tagColor};
+  &:hover {
+    background: ${(props) => `${props.$tagColor}10`};
+  }
+`;
 
 const TagsInputContainer = styled.div`
   border-bottom: 1px solid rgba(0, 0, 0, 0.42);
@@ -17,11 +39,12 @@ const TagsInputContainer = styled.div`
 
 const TagItem = styled.div`
   display: inline-block;
-  padding: 5px 8px;
+  padding: 8px;
   margin-bottom: 2px;
   border-radius: 3px;
   color: #fff;
-  background-color: ${(props) => props.$tagColor};
+  // background-color: ${(props) => props.$tagColor};
+  ${(props) => variantMap[props.$variant] || variantMap.primary}
 `;
 
 const TagText = styled.span``;
@@ -29,16 +52,18 @@ const TagText = styled.span``;
 const TagCloseIcon = styled.span`
   height: 20px;
   width: 20px;
-  background-color: rgb(48, 48, 48);
-  color: #fff;
+  color: props.$variant === 'contained' ? #fff : variantMap.primary;
   border-radius: 50%;
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5px;
+  /* margin-top: 5px; */
   margin-left: 10px;
   font-size: 9px;
   cursor: pointer;
+  &:hover {
+    background-color: rgb(48, 48, 48, 0.5);
+  }
 `;
 
 const TagInput = styled.input`
@@ -47,6 +72,12 @@ const TagInput = styled.input`
   border: none;
   outline: none;
 `;
+
+const variantMap = {
+  contained: containedStyle,
+  outlined: outlinedStyle,
+  text: textStyle,
+};
 
 /**
  * `TagsInput` 同一欄位傳送用逗號分隔的資料可用。
@@ -59,6 +90,7 @@ const TagsInput = ({
   themeColor,
   isDisabled,
   closeIcon,
+  variant,
 }) => {
   const [tags, setTags] = useState([]);
   const { makeColor } = useColor();
@@ -78,7 +110,6 @@ const TagsInput = ({
   };
 
   const removeTag = (index) => {
-    console.log('index = ', index);
     setTags(tags.filter((el, i) => i !== index));
     tagsSubmit(tags.filter((el, i) => i !== index));
   };
@@ -86,9 +117,9 @@ const TagsInput = ({
   return (
     <TagsInputContainer>
       {tags?.map((tag, index) => (
-        <TagItem $tagColor={tagsColor} key={index}>
+        <TagItem $tagColor={tagsColor} $variant={variant} key={index}>
           <TagText>{tag}</TagText>
-          <TagCloseIcon onClick={() => removeTag(index)}>
+          <TagCloseIcon $variant={variant} onClick={() => removeTag(index)}>
             {closeIcon}
           </TagCloseIcon>
         </TagItem>
