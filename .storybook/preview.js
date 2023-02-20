@@ -1,7 +1,6 @@
 import { ThemeProvider } from 'styled-components';
 import { theme } from '../src/theme/index';
 import Center from '../src/stories/Center';
-import { library } from '@fortawesome/fontawesome-svg-core';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -17,9 +16,9 @@ export const parameters = {
 export const decorators = [
   (Story) => (
     <ThemeProvider theme={theme.default}>
-      <Center>
-        <Story />
-      </Center>
+      {/* <Center> */}
+      <Story />
+      {/* </Center> */}
     </ThemeProvider>
   ),
 ];

@@ -76,7 +76,6 @@ const Switch = ({
   const switchWidth = thumbSize + labelWidth;
   const switchColor = makeColor({ themeColor, isDisabled: !isChecked });
 
-  // 同步、畫面渲染前執行
   useLayoutEffect(() => {
     const minLabelSize = thumbSize * 1.2;
     const currentLabelWidth = labelRef?.current?.clientWidth;

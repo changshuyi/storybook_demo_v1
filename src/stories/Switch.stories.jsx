@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import Switch from '../components/switch/Switch';
@@ -19,41 +19,29 @@ export default {
   },
 };
 
-const Template = (args) => <Switch {...args} />;
-export const Default = Template.bind({});
-Default.args = {
-  isChecked: true,
+export const Default = () => {
+  const [isChecked, setIsChecked] = React.useState(false);
+  return (
+    <Switch
+      isChecked={isChecked}
+      onChange={() => setIsChecked((prev) => !prev)}
+    />
+  );
 };
 
-// export const Default = () => {
-//   const [isChecked, setIsChecked] = useState(false);
-//   return (
-//     <Switch
-//       isChecked={isChecked}
-//       onChange={() => setIsChecked((prev) => !prev)}
-//     />
-//   );
-// };
-
-export const CustomColor = Template.bind({});
-CustomColor.args = {
-  isChecked: true,
-  themeColor: '#ffc107',
+export const CustomColor = () => {
+  const [isChecked, setIsChecked] = React.useState(true);
+  return (
+    <Switch
+      isChecked={isChecked}
+      onChange={() => setIsChecked((prev) => !prev)}
+      themeColor="#ffc107"
+    />
+  );
 };
 
-// export const CustomColor = () => {
-//   const [isChecked, setIsChecked] = useState(true);
-//   return (
-//     <Switch
-//       isChecked={isChecked}
-//       onChange={() => setIsChecked((prev) => !prev)}
-//       themeColor="#ffc107"
-//     />
-//   );
-// };
-
-export const DisabledSwitch = (args) => {
-  const [isChecked, setIsChecked] = useState(false);
+export const DisabledSwitch = () => {
+  const [isChecked, setIsChecked] = React.useState(false);
   return (
     <div style={{ display: 'flex', gap: '24px' }}>
       <Switch
@@ -70,8 +58,8 @@ export const DisabledSwitch = (args) => {
   );
 };
 
-export const SwitchWithSize = (args) => {
-  const [isChecked, setIsChecked] = useState(false);
+export const SwitchWithSize = () => {
+  const [isChecked, setIsChecked] = React.useState(false);
   return (
     <SwitchGroup>
       <Switch
@@ -88,7 +76,7 @@ export const SwitchWithSize = (args) => {
 };
 
 export const SwitchWithChildrenLabel = (args) => {
-  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked, setIsChecked] = React.useState(false);
   return (
     <SwitchGroup>
       <Switch
