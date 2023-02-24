@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 
-import Dropdown from '../Dropdown';
+import Dropdown from '../dropdown/Dropdown';
 
 import { CircularProgress } from '@mui/material';
 import { KeyboardArrowDown } from '@mui/icons-material';
