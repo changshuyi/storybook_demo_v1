@@ -10,8 +10,7 @@ export default {
 
 const Template = (args) => <ProgressBar {...args} />;
 
-export const progressBar = Template.bind({});
-
-progressBar.args = {
-  done: 0,
+export const Default = Template.bind({});
+Default.args = {
+  done: 20,
 };

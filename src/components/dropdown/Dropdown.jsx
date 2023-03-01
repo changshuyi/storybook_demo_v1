@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect, useCallback } from 'react';
 import styled, { css, keyframes } from 'styled-components';
 import PropTypes from 'prop-types';
 
-import Portal from '../Portal/Portal';
+import Portal from '../portal/Portal';
 import { findAttributeInEvent } from '../../utils/event';
 
 const topStyle = css`
